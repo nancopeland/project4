@@ -56,9 +56,11 @@
             {
                 $userArray = $items['user'];
                 
-                echo "User @<a>" . $userArray['screen_name'] . "</a>";
-                echo "<div class='twitter-tweet'>Tweet: ". $items['text'] . "'</br></div>'";
-                echo "When: " . $items['created_at'] . "</br>"; 
+                echo "<div class='tweet'><div class='twitter-pic'><img src='" . $userArray['profile_image_url'] . "'></></div>";
+                echo "<div class='twitter-text'><div class='twitter-name'>" . $userArray['name'] . $userArray['screen_name'] . "</div>";
+                echo "<div class='twitter-tweet'>" . $items['text'] . "'</br></div>'";
+                echo  $items['created_at'] . "</br></div></div>";
+
             }
             
         echo $twitter->setGetfield($getfield)
