@@ -1,16 +1,72 @@
 /*style*/
 
+body {
+    /*background-color: #EAE7DA;*/
+    font-size: 12px; 
+}
+
+h1 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 900;
+    font-size: 5em; 
+}
+
+h3 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    font-size: 2em; 
+}
+
+h6 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em; 
+}
+
+p {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em; 
+}
+
 iframe {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     border: none; 
+}
+
+.title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px; 
+}
+
+/*google maps styling*/
+.map {
+    padding-top: 80px;
+    padding-bottom: 50px; 
+}
+
+html, body, #map-canvas {
+    height: 75%;
+    margin: 0;
+    padding: 0;
+}
+
+/*social*/
+.social {
+    padding-top: 80px;
+    padding-bottom: 100px; 
+}
+
+.social-apis {
+    padding-top: 30px; 
 }
 
 .tweet {
     padding-top: 10px;
     padding-bottom: 10px; 
     border-top: 1px solid #eeeeee;
-
 }
 
 .twitter-pic {
@@ -20,5 +76,20 @@ iframe {
 
 .twitter-text {
     display: inline-block;
-    padding-left: 10px; 
+    padding-left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

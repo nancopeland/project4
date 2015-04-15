@@ -63,9 +63,9 @@
 
             }
             
-        echo $twitter->setGetfield($getfield)
+        /*echo $twitter->setGetfield($getfield)
                      ->buildOauth($url, $requestMethod)
-                     ->performRequest();
+                     ->performRequest();*/
                      
             
         ?>
