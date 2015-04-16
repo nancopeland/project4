@@ -1,5 +1,11 @@
 <html>
 <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Twitter API</title>
+    
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <link href="css/style.css" rel="stylesheet"/>
@@ -56,10 +62,10 @@
             {
                 $userArray = $items['user'];
                 
-                echo "<div class='tweet'><div class='twitter-pic'><img src='" . $userArray['profile_image_url'] . "'></></div>";
-                echo "<div class='twitter-text'><div class='twitter-name'>" . $userArray['name'] . $userArray['screen_name'] . "</div>";
-                echo "<div class='twitter-tweet'>" . $items['text'] . "'</br></div>'";
-                echo  $items['created_at'] . "</br></div></div>";
+                echo "<ul class='tweet col-md-12'><li class='twitter-list'><div class='twitter-pic col-md-1 col-sm-1 col-xs-1'><img src='" . $userArray['profile_image_url'] . "'></></div>";
+                echo "<div class='twitter-text col-md-11 col-sm-11 col-xs-11'><div class='twitter-name'>" . $userArray['name'] . $userArray['screen_name'] . "</div>";
+                echo "<div class='twitter-tweet'>" . $items['text'] . "'</div>'";
+                echo  $items['created_at'] . "</div></li></ul>";
 
             }
             
