@@ -29,12 +29,6 @@ p {
     font-size: 1.1em; 
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none; 
-}
-
 .title {
     text-align: center;
     padding-top: 30px;
@@ -58,8 +52,14 @@ iframe {
     padding-bottom: 50px; 
 }
 
+.map iframe {
+    width: 675px;
+    height: 440px;
+    border: none; 
+}
+
 .map p {
-    text-align: left;
+    text-align: right;
     padding-top: 10px; 
 }
 
@@ -73,6 +73,12 @@ html, body, #map-canvas {
 .social {
     padding-top: 80px;
     padding-bottom: 100px; 
+}
+
+.social iframe {
+    width: 100%;
+    height: 800px;
+    border: none; 
 }
 
 .social-apis {
@@ -98,6 +104,22 @@ html, body, #map-canvas {
     float: left; 
 }
 
+#results {
+    display: inline; 
+}
+
+.insta-pic {
+    display: inline;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+
+.insta-user {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    color: #1c5380;
+    font-size: 1.2em; 
+}
 
 
 
