@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    
     <script>
       function init() {
-        var mapMinZoom = 2;
+        var mapMinZoom = 3;
         var mapMaxZoom = 5;
         var map = L.map('map', {
           maxZoom: mapMaxZoom,
@@ -25,13 +26,22 @@
             
         map.fitBounds(mapBounds);
         L.tileLayer('{z}/{x}/{y}.png', {
-          minZoom: mapMinZoom, maxZoom: mapMaxZoom,
+          minZoom: mapMinZoom,
+          maxZoom: mapMaxZoom,
           bounds: mapBounds,
           attribution: 'Rendered with <a href="http://www.maptiler.com/">MapTiler</a>',
           noWrap: true          
         }).addTo(map);
+        
+        
+        L.marker([-64, 48]).addTo(map);
+        
+        L.marker([-24, 37]).addTo(map); 
+        
+        
       }
     </script>
+    
     <style>
       html, body, #map { width:100%; height:100%; margin:0; padding:0; }
     </style>

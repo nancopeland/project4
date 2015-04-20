@@ -53,8 +53,8 @@ p {
 }
 
 .map iframe {
-    width: 675px;
-    height: 440px;
+    width: 100%;
+    height: 905px;
     border: none; 
 }
 
