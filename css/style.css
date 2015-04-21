@@ -90,13 +90,10 @@ html, body, #map-canvas {
     padding-top: 30px; 
 }
 
-.tweet li {
+.twitter-list {
     padding: 10px 0px 10px 0px;
     overflow: hidden;
-}
-
-.twitter-list {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee; 
 }
 
 .twitter-pic {
@@ -105,7 +102,6 @@ html, body, #map-canvas {
 }
 
 .twitter-text {
-    padding-left: 20px;
     float: left; 
 }
 

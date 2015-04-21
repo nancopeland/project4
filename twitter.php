@@ -11,6 +11,16 @@
     <link href="css/style.css" rel="stylesheet"/>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/tweetLinkIt.js"></script>
+    <script>
+        
+        $('.twitter-text').tweetLinkify();
+        
+        function pageComplete(){
+        $('.twitter-text').tweetLinkify();
+        }
+        
+    </script>
     <script src="js/script.js"></script>
 </head>
 
@@ -62,10 +72,18 @@
             {
                 $userArray = $items['user'];
                 
-                echo "<ul class='tweet col-md-12'><li class='twitter-list'><div class='twitter-pic col-md-1 col-sm-1 col-xs-1'><img src='" . $userArray['profile_image_url'] . "'></></div>";
-                echo "<div class='twitter-text col-md-11 col-sm-11 col-xs-11'><div class='twitter-name'>" . $userArray['name'] . $userArray['screen_name'] . "</div>";
-                echo "<div class='twitter-tweet'>" . $items['text'] . "'</div>'";
-                echo  $items['created_at'] . "</div></li></ul>";
+                echo "<div class='row tweet'>
+                        <div class='col-md-12 twitter-list'>
+                            <div class='col-md-1 col-sm-1 col-xs-12 twitter-pic'>
+                                <img src='" . $userArray['profile_image_url'] . "'></>
+                            </div>";
+                            echo "<div class='col-md-11 col-sm-11 col-xs-12'>
+                                <div class='twitter-name'><strong><a href='https://twitter.com/'" . $userArray['name'] . ">@" . $userArray['screen_name'] . "</a></strong></div>";
+                                echo "<div class='twitter-tweet twitter-text'>" . $items['text'] . "</div>
+                            </div>
+                        </div>
+                    </div>";
+                //echo  "<div class='twitter-time'>" . $items['created_at'] . "</div></div></div>";
 
             }
             
@@ -73,6 +91,7 @@
                      ->buildOauth($url, $requestMethod)
                      ->performRequest();*/
                      
+        echo "<script>pageComplete();</script>"
             
         ?>
     </div>
