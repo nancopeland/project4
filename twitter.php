@@ -8,6 +8,7 @@
     
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700,900' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet"/>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
@@ -58,7 +59,7 @@
         /** Perform a GET request and echo the response **/
         /** Note: Set the GET field BEFORE calling buildOauth(); **/
         $url = 'https://api.twitter.com/1.1/search/tweets.json';
-        $getfield = '?q=%23gameofthrones&result_type=popular';
+        $getfield = '?q=%23gameofthrones';
         $requestMethod = 'GET';
         $twitter = new TwitterAPIExchange($settings);
         
@@ -74,18 +75,21 @@
                 
                 echo "<div class='row tweet'>
                         <div class='col-md-12 twitter-list'>
-                            <div class='col-md-1 col-sm-1 col-xs-12 twitter-pic'>
+                            <div class='col-md-1 col-sm-1 col-xs-1 twitter-pic'>
                                 <img src='" . $userArray['profile_image_url'] . "'></>
                             </div>";
-                            echo "<div class='col-md-11 col-sm-11 col-xs-12'>
-                                <div class='twitter-name'><strong><a href='https://twitter.com/'" . $userArray['name'] . ">@" . $userArray['screen_name'] . "</a></strong></div>";
-                                echo "<div class='twitter-tweet twitter-text'>" . $items['text'] . "</div>
+                            echo "<div class='col-md-11 col-sm-11 col-xs-11'>
+                                <div class='twitter-user'>
+                                    <a href='https://twitter.com/" . $userArray['screen_name'] . "'><strong>" . $userArray['name'] . "</strong></a>
+                                    <a href='https://twitter.com/" . $userArray['screen_name'] . "'><small>@" . $userArray['screen_name'] . "</small></a>
+                                </div>";
+                                echo "<div class='twitter-text'>" . $items['text'] . "</div> 
                             </div>
                         </div>
                     </div>";
-                //echo  "<div class='twitter-time'>" . $items['created_at'] . "</div></div></div>";
-
+                    
             }
+            //echo "<div class='twitter-time'>" . $items['created_at'] . "</div>
             
         /*echo $twitter->setGetfield($getfield)
                      ->buildOauth($url, $requestMethod)
