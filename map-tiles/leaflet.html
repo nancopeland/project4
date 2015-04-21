@@ -8,12 +8,16 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700,900' rel='stylesheet' type='text/css'>
+    <link href="../css/style.css" rel="stylesheet"/>
+    
     <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
     
     <script>
       function init() {
         var mapMinZoom = 3;
         var mapMaxZoom = 5;
+        
         var map = L.map('map', {
           maxZoom: mapMaxZoom,
           minZoom: mapMinZoom,
@@ -25,6 +29,7 @@
             map.unproject([5888, 0], mapMaxZoom));
             
         map.fitBounds(mapBounds);
+        
         L.tileLayer('{z}/{x}/{y}.png', {
           minZoom: mapMinZoom,
           maxZoom: mapMaxZoom,
@@ -33,10 +38,24 @@
           noWrap: true          
         }).addTo(map);
         
+        //markers
+        var marker = L.marker([-64, 48]).addTo(map);
+          marker.bindPopup("<h6>Kings Landing</h6>");
+          
+        var marker2 = L.marker([-24, 37]).addTo(map);
+          marker2.bindPopup("<h6>Winterfell</h6>");
         
-        L.marker([-64, 48]).addTo(map);
+        /*var latlng = L.latLng(-64, 48);
         
-        L.marker([-24, 37]).addTo(map); 
+        L.marker([-64, 48]).addTo(map); 
+        
+        L.marker([-24, 37]).addTo(map);
+        
+        L.popup({
+          addTo: (map),
+          setLatLng: latlng,
+          setContent: '<h3>Kings Landing</h3>'
+        })*/
         
         
       }
