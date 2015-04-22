@@ -39,31 +39,32 @@
         }).addTo(map);
         
         //markers
-        var redIcon = L.icon({
-            iconUrl: 'markers/marker_lannister.png',
-            //shadowUrl: 'leaf-shadow.png',
-        
+        var yellowIcon = L.icon({
+            iconUrl: 'markers/marker_baratheon.png',
             iconSize:     [30, 50], // size of the icon
-            //shadowSize:   [50, 64], // size of the shadow
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
-            //shadowAnchor: [4, 62],  // the same for the shadow
             popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
         });
-        var kingsLanding = L.marker([-63, 47], {icon: redIcon}).addTo(map);
-        kingsLanding.bindPopup("<h6>King's Landing</h6>");
+        var kingsLanding = L.marker([-63, 47], {icon: yellowIcon}).addTo(map);
+        kingsLanding.bindPopup("<div class='map-popup'><img src='seals/baratheon.png'><h6>King's Landing</h6><p><strong>Current Rulers:</strong> House Baratheon/House Lannister</p><p><strong>Former Ruler:</strong> House Tagaryn</p><p>This is the throne everyone is fighting for.</p></div>");
           
         var greyIcon = L.icon({
             iconUrl: 'markers/marker_stark.png',
-            //shadowUrl: 'leaf-shadow.png',
-        
             iconSize:     [30, 50], // size of the icon
-            //shadowSize:   [50, 64], // size of the shadow
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
-            //shadowAnchor: [4, 62],  // the same for the shadow
             popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
         });
         var winterfell = L.marker([-23, 37], {icon: greyIcon}).addTo(map);
-        winterfell.bindPopup("<div class='map-popup'><img src='seals/stark.png'><h6>Winterfell</h6><p><strong>Former Rulers:</strong> House Stark</p><p><strong>Current Rulers:</strong> House Bolton</p></div>");
+        winterfell.bindPopup("<div class='map-popup'><img src='seals/stark.png'><h6>Winterfell</h6><p><strong>Current Ruler:</strong> House Bolton</p><p><strong>Former Ruler:</strong> House Stark</p><p>Notable residents include Ned Stark and the Stark family, Jon Snow and Theon Greyjoy.</p></div>");
+        
+        var redIcon = L.icon({
+            iconUrl: 'markers/marker_lannister.png',
+            iconSize:     [30, 50], // size of the icon
+            iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
+        });
+        var winterfell = L.marker([-61, 23], {icon: redIcon}).addTo(map);
+        winterfell.bindPopup("<div class='map-popup'><img src='seals/lannister.png'><h6>Casterly Rock</h6><p><strong>Current Ruler:</strong> House Lannister</p><p><strong>Former Ruler:</strong> No one notable.</p><p>This is where the famed Lannisters grew up before they moved to King's Landing.</p></div>");
         
         
       }
