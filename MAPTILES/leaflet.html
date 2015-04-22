@@ -26,8 +26,8 @@
         }).setView([0, 0], mapMaxZoom);
         
         var mapBounds = new L.LatLngBounds(
-            map.unproject([0, 3840], mapMaxZoom),
-            map.unproject([5888, 0], mapMaxZoom));
+            map.unproject([0, 3650], mapMaxZoom),
+            map.unproject([4700, 0], mapMaxZoom));
             
         map.fitBounds(mapBounds);
         
@@ -65,6 +65,15 @@
         });
         var winterfell = L.marker([-61, 23], {icon: redIcon}).addTo(map);
         winterfell.bindPopup("<div class='map-popup'><img src='seals/lannister.png'><h6>Casterly Rock</h6><p><strong>Current Ruler:</strong> House Lannister</p><p><strong>Former Ruler:</strong> No one notable.</p><p>This is where the famed Lannisters grew up before they moved to King's Landing.</p></div>");
+        
+        var greenIcon = L.icon({
+            iconUrl: 'markers/marker_tyrell.png',
+            iconSize:     [30, 50], // size of the icon
+            iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
+        });
+        var winterfell = L.marker([-76, 29], {icon: greenIcon}).addTo(map);
+        winterfell.bindPopup("<div class='map-popup'><img src='seals/tyrell.png'><h6>Highgarden</h6><p><strong>Current Ruler:</strong> House Tyrell</p><p><strong>Former Ruler:</strong> House Gardener</p><p>Notable residents include Margaery, Loras and Olenna Tyrell.</p></div>");
         
         
       }
