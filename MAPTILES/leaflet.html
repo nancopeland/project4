@@ -16,7 +16,7 @@
     
     <script>
       function init() {
-        var mapMinZoom = 3;
+        var mapMinZoom = 2;
         var mapMaxZoom = 5;
         
         var map = L.map('map', {
@@ -27,7 +27,7 @@
         
         var mapBounds = new L.LatLngBounds(
             map.unproject([0, 3650], mapMaxZoom),
-            map.unproject([4700, 0], mapMaxZoom));
+            map.unproject([5600, 0], mapMaxZoom));
             
         map.fitBounds(mapBounds);
         
@@ -45,17 +45,17 @@
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
             popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
-        var kingsLanding = L.marker([-63, 47], {icon: yellowIcon}).addTo(map);
+        var kingsLanding = L.marker([-64, 47], {icon: yellowIcon}).addTo(map);
         kingsLanding.bindPopup("<div class='map-popup'><img src='seals/baratheon.png'><h6>King's Landing</h6><p><strong>Current Rulers:</strong> House Baratheon/House Lannister</p><p><strong>Former Ruler:</strong> House Tagaryn</p><p>This is the throne everyone is fighting for.</p></div>");
           
-        var greyIcon = L.icon({
-            iconUrl: 'markers/marker_stark.png',
-            iconSize:     [30, 50], // size of the icon
+        var purpleIcon = L.icon({
+            iconUrl: 'markers/marker_bolton.png',
+            iconSize:     [60, 30], // size of the icon
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
-            popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
+            popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
-        var winterfell = L.marker([-23, 37], {icon: greyIcon}).addTo(map);
-        winterfell.bindPopup("<div class='map-popup'><img src='seals/stark.png'><h6>Winterfell</h6><p><strong>Current Ruler:</strong> House Bolton</p><p><strong>Former Ruler:</strong> House Stark</p><p>Notable residents include Ned Stark and the Stark family, Jon Snow and Theon Greyjoy.</p></div>");
+        var winterfell = L.marker([-25, 36], {icon: purpleIcon}).addTo(map);
+        winterfell.bindPopup("<div class='map-popup'><img src='seals/bolton.png'><h6>Winterfell</h6><p><strong>Current Ruler:</strong> House Bolton</p><p><strong>Former Ruler:</strong> House Stark</p><p>The Boltons murdered Robb and Catelyn Stark during the Red Wedding.</p></div>");
         
         var redIcon = L.icon({
             iconUrl: 'markers/marker_lannister.png',
@@ -63,8 +63,8 @@
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
             popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
-        var winterfell = L.marker([-61, 23], {icon: redIcon}).addTo(map);
-        winterfell.bindPopup("<div class='map-popup'><img src='seals/lannister.png'><h6>Casterly Rock</h6><p><strong>Current Ruler:</strong> House Lannister</p><p><strong>Former Ruler:</strong> No one notable.</p><p>This is where the famed Lannisters grew up before they moved to King's Landing.</p></div>");
+        var casterlyrock = L.marker([-62, 22], {icon: redIcon}).addTo(map);
+        casterlyrock.bindPopup("<div class='map-popup'><img src='seals/lannister.png'><h6>Casterly Rock</h6><p><strong>Current Ruler:</strong> House Lannister</p><p><strong>Former Ruler:</strong> No one notable.</p><p>This is where the famed Lannisters grew up before they moved to King's Landing.</p></div>");
         
         var greenIcon = L.icon({
             iconUrl: 'markers/marker_tyrell.png',
@@ -72,8 +72,8 @@
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
             popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
-        var winterfell = L.marker([-76, 29], {icon: greenIcon}).addTo(map);
-        winterfell.bindPopup("<div class='map-popup'><img src='seals/tyrell.png'><h6>Highgarden</h6><p><strong>Current Ruler:</strong> House Tyrell</p><p><strong>Former Ruler:</strong> House Gardener</p><p>Notable residents include Margaery, Loras and Olenna Tyrell.</p></div>");
+        var highgarden = L.marker([-77, 29], {icon: greenIcon}).addTo(map);
+        highgarden.bindPopup("<div class='map-popup'><img src='seals/tyrell.png'><h6>Highgarden</h6><p><strong>Current Ruler:</strong> House Tyrell</p><p><strong>Former Ruler:</strong> House Gardener</p><p>Notable residents include Margaery, Loras and Olenna Tyrell.</p></div>");
         
         var redderIcon = L.icon({
             iconUrl: 'markers/marker_targaryen.png',
@@ -81,8 +81,8 @@
             iconAnchor:   [7, 40], // point of the icon which will correspond to marker's location
             popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
-        var winterfell = L.marker([-83, 128], {icon: redderIcon}).addTo(map);
-        winterfell.bindPopup("<div class='map-popup'><img src='seals/targaryen.png'><h6>Meereen</h6><p><strong>Current Ruler:</strong> House Targaryen</p><p>Daenarys Targaryen lives here because her family was exiled. The Targaryens formerly ruled King's Landing and Dragonstone.</p></div>");
+        var meereen = L.marker([-83, 128], {icon: redderIcon}).addTo(map);
+        meereen.bindPopup("<div class='map-popup'><img src='seals/targaryen.png'><h6>Meereen</h6><p><strong>Current Ruler:</strong> House Targaryen</p><p>Daenarys Targaryen lives here because her family was exiled. The Targaryens formerly ruled King's Landing and Dragonstone.</p></div>");
         
         var orangeIcon = L.icon({
             iconUrl: 'markers/marker_martell.png',
@@ -90,9 +90,35 @@
             iconAnchor:   [7, 40], // point of the icon which will correspond to marker's location
             popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
-        var winterfell = L.marker([-90, 54], {icon: orangeIcon}).addTo(map);
-        winterfell.bindPopup("<div class='map-popup'><img src='seals/martell.png'><h6>Sunspear</h6><p><strong>Current Ruler:</strong> House Martell</p><p><strong>Former Ruler:</strong> None</p><p>Notable residents include Oberyn and Elia Martell.</p></div>");
+        var sunspear = L.marker([-90, 54], {icon: orangeIcon}).addTo(map);
+        sunspear.bindPopup("<div class='map-popup'><img src='seals/martell.png'><h6>Sunspear</h6><p><strong>Current Ruler:</strong> House Martell</p><p><strong>Former Ruler:</strong> None</p><p>Notable residents include Oberyn and Elia Martell.</p></div>");
         
+        var starIcon = L.icon({
+            iconUrl: 'markers/marker_star.png',
+            iconSize:     [30, 30], // size of the icon
+            iconAnchor:   [7, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [10, -50] // point from which the popup should open relative to the iconAnchor
+        });
+        var castleblack = L.marker([-9, 43], {icon: starIcon}).addTo(map);
+        castleblack.bindPopup("<div class='map-popup-star'><h6>Castle Black</h6><p>Castle Black is defended by the Night's Watch and Jon Snow is currently in command. It is meant to protect Westeros from wildlings above the Wall.</p></div>");
+        var essos = L.marker([-70, 110], {icon: starIcon}).addTo(map);
+        essos.bindPopup("<div class='map-popup-star'><h6>Essos</h6><p>Essos is one of the four known lands. The Free Cities are located here and the Dothraki are known to live all over the continent.</p></div>");
+        var astapor = L.marker([-93, 124], {icon: starIcon}).addTo(map);
+        astapor.bindPopup("<div class='map-popup-star'><h6>Astapor</h6><p>Astapor is the city where Daenarys purchased her Unsullied soldiers. They are the reason she has become so powerful amongst the Free Cities.</p></div>");
+        
+        
+        var triangleIcon = L.icon({
+            iconUrl: 'markers/marker_stark.png',
+            iconSize:     [30, 30], // size of the icon
+            iconAnchor:   [7, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [10, -50] // point from which the popup should open relative to the iconAnchor
+        });
+        var braavos = L.marker([-46, 69], {icon: triangleIcon}).addTo(map);
+        braavos.bindPopup("<div class='map-popup'><img src='seals/stark.png'><h6>Arya Stark</h6><p>Arya Stark is believed to have taken a ship to Braavos after the Hound was injured in a battle with Brienne of Tarth.</p></div>");
+        var runestone = L.marker([-51, 57], {icon: triangleIcon}).addTo(map);
+        runestone.bindPopup("<div class='map-popup'><img src='seals/stark.png'><h6>Sansa Stark</h6><p>Sansa Stark has been traveling through the Riverlands with Peter Baelish ever since Joeffrey's death at his wedding.</p></div>");
+        var abovewall = L.marker([-5, 30], {icon: triangleIcon}).addTo(map);
+        abovewall.bindPopup("<div class='map-popup'><img src='seals/stark.png'><h6>Bran Stark</h6><p>Bran Stark is with Hodor somewhere above the Wall with the Three-Eyed Raven.</p></div>");
         
       }
     </script>

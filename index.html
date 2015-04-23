@@ -10,7 +10,8 @@
     
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700,900|Bitter:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700|Bitter:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet"/>
     
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>   
@@ -22,15 +23,42 @@
     
     <div class="row title">
         <h1>Game of Thrones</h1>
-        <h6>yeah yeah game of thrones is cool<h6>
     </div>
+    
     <div class="container">
+        
+        <div class="row">
+            
+        </div>
         
         <!--map-->
         <div class="row map">
-            <div class="col-md-12 text-center">
-                    <iframe src="MAPTILES/leaflet.html"></iframe>
-                    <p>Photo: HBO</p>
+            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="intro-text">
+                        <h6>Since its debut in 2011, HBO's Game of Thrones has become one of the most popular and critically acclaimed shows on TV. 
+                        With an intricate storyline and an amazing cast, how could you not be hooked?  
+                        The show is based on the book series A Song of Ice and Fire by George R. R. Martin.
+                        The show takes place in the fictional lands of Westeros and Essos and follows the lives
+                        of the leading families in Westeros competing for the throne (hence the "game of thrones").</h6>
+                        <h6>The fifth season premiered on April 12, 2015 so, to get caught up, the map below shows the notable
+                        towns and castles in the show and which families rule those locations.</h6>
+                        <div class="key">
+                            <div class="key-line">
+                                <img src="MAPTILES/markers/marker_lannister.png"><small>City with powerful house</small>
+                            </div>
+                            <div class="key-line">
+                                <img src="MAPTILES/markers/marker_star.png"><small>Place with meaningful residents or event</small>
+                            </div>
+                            <div class="key-line">
+                                <img src="MAPTILES/markers/marker_stark.png"><small>Location of the Stark children</small>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="map-iframe">
+                        <iframe src="MAPTILES/leaflet.html"></iframe>
+                    </div>
+                    <a class="text-center" href="http://nan-copeland.com/project4/MAPTILES/leaflet.html"><h6>View the map in full screen here!</h6></a>
             </div>
         </div>
         
@@ -39,11 +67,19 @@
             <div class="col-md-12">
                 <h3>What are people saying about Game of Thrones?</h3>
                 <div class="row social-apis">
-                    <div class="col-md-8 col-sm-12 col-xs-12 twitter text-center">
+                    <div class="col-md-8 col-sm-12 col-xs-12 twitter">
+                        <div class="social-titles">
+                            <i class="fa fa-twitter"></i>
+                            <strong>Twitter</strong>
+                        </div>
                         <!--<iframe src="twitter.php"></iframe>-->
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 instagram text-center">
-                        <iframe src="instagram.html"></iframe>
+                    <div class="col-md-4 col-sm-12 col-xs-10 instagram center-block">
+                        <div class="social-titles">
+                            <i class="fa fa-instagram"></i>
+                            <strong>Instagram</strong>
+                        </div>
+                        <div class="insta-iframe"><iframe src="instagram.html"></iframe></div>
                     </div>
                 </div>
             </div>
@@ -53,8 +89,9 @@
     
     
     </div>
+    
     <footer>
-        <p>SOURCES</p>
+        <p>SOURCES: HBO & Game of Throne Wiki</p>
     </footer>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
