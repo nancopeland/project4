@@ -41,9 +41,9 @@
         //markers
         var yellowIcon = L.icon({
             iconUrl: 'markers/marker_baratheon.png',
-            iconSize:     [30, 50], // size of the icon
+            iconSize:     [60, 30], // size of the icon
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
-            popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
+            popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
         var kingsLanding = L.marker([-63, 47], {icon: yellowIcon}).addTo(map);
         kingsLanding.bindPopup("<div class='map-popup'><img src='seals/baratheon.png'><h6>King's Landing</h6><p><strong>Current Rulers:</strong> House Baratheon/House Lannister</p><p><strong>Former Ruler:</strong> House Tagaryn</p><p>This is the throne everyone is fighting for.</p></div>");
@@ -59,21 +59,39 @@
         
         var redIcon = L.icon({
             iconUrl: 'markers/marker_lannister.png',
-            iconSize:     [30, 50], // size of the icon
+            iconSize:     [60, 30], // size of the icon
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
-            popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
+            popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
         var winterfell = L.marker([-61, 23], {icon: redIcon}).addTo(map);
         winterfell.bindPopup("<div class='map-popup'><img src='seals/lannister.png'><h6>Casterly Rock</h6><p><strong>Current Ruler:</strong> House Lannister</p><p><strong>Former Ruler:</strong> No one notable.</p><p>This is where the famed Lannisters grew up before they moved to King's Landing.</p></div>");
         
         var greenIcon = L.icon({
             iconUrl: 'markers/marker_tyrell.png',
-            iconSize:     [30, 50], // size of the icon
+            iconSize:     [60, 30], // size of the icon
             iconAnchor:   [5, 40], // point of the icon which will correspond to marker's location
-            popupAnchor:  [7, -45] // point from which the popup should open relative to the iconAnchor
+            popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
         });
         var winterfell = L.marker([-76, 29], {icon: greenIcon}).addTo(map);
         winterfell.bindPopup("<div class='map-popup'><img src='seals/tyrell.png'><h6>Highgarden</h6><p><strong>Current Ruler:</strong> House Tyrell</p><p><strong>Former Ruler:</strong> House Gardener</p><p>Notable residents include Margaery, Loras and Olenna Tyrell.</p></div>");
+        
+        var redderIcon = L.icon({
+            iconUrl: 'markers/marker_targaryen.png',
+            iconSize:     [60, 30], // size of the icon
+            iconAnchor:   [7, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
+        });
+        var winterfell = L.marker([-83, 128], {icon: redderIcon}).addTo(map);
+        winterfell.bindPopup("<div class='map-popup'><img src='seals/targaryen.png'><h6>Meereen</h6><p><strong>Current Ruler:</strong> House Targaryen</p><p>Daenarys Targaryen lives here because her family was exiled. The Targaryens formerly ruled King's Landing and Dragonstone.</p></div>");
+        
+        var orangeIcon = L.icon({
+            iconUrl: 'markers/marker_martell.png',
+            iconSize:     [60, 30], // size of the icon
+            iconAnchor:   [7, 40], // point of the icon which will correspond to marker's location
+            popupAnchor:  [20, -50] // point from which the popup should open relative to the iconAnchor
+        });
+        var winterfell = L.marker([-90, 54], {icon: orangeIcon}).addTo(map);
+        winterfell.bindPopup("<div class='map-popup'><img src='seals/martell.png'><h6>Sunspear</h6><p><strong>Current Ruler:</strong> House Martell</p><p><strong>Former Ruler:</strong> None</p><p>Notable residents include Oberyn and Elia Martell.</p></div>");
         
         
       }
